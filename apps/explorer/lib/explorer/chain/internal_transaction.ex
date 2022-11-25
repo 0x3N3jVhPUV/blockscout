@@ -496,7 +496,7 @@ defmodule Explorer.Chain.InternalTransaction do
     end)
   end
 
-  @call_success_fields ~w(gas_used output)a
+  @call_success_fields ~w(gas_used)a
 
   # Validates that :call `type` changeset either has an `error` or both `gas_used` and `output`
   defp validate_call_error_or_result(changeset) do
