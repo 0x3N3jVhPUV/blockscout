@@ -4400,7 +4400,7 @@ defmodule Explorer.Chain do
     )
   end
 
-  defp order_for_transactions(query, nil, true) do
+  defp order_for_transactions(query, %PagingOptions{key: nil}, true) do
     query
     |> order_by([transaction],
       desc: transaction.block_number,
